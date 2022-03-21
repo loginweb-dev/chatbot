@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 offset-md-3 col-md-6 mt-3">
+
+				<h4 class="text-center">Proforma #<%=midata.id%></h4>
+				<div class="form-group">
+					<h5 class=""><u>MODELO:</u> <%= midata.product_name %></h5>
+				</div>
+				<div class="form-group">
+					<img src="<%= midata.image %>" class="img-sm img-thumbnail">
+				</div>
+				<div class="form-group">
+					<table class="table">
+						<tbody>
+							<tr>
+								<td><strong>Precio Bs</strong></td>
+								<td><small><%= Number(midata.product_price).toFixed(0) %></small></td>
+								<td><strong>Cuota M.</strong></td>
+								<td><small><%= Number(midata.cuota_fija).toFixed(2) %></small></td>
+							</tr>
+							<tr>
+								<td><strong>C. Inicial</strong></td>
+								<td><small><%= midata.inicial %></small></td>
+								<td><strong>Plazo</strong></td>
+								<td><small><%= midata.plazo %> Meses</small></td>
+							</tr>
+							<tr>
+								<td><strong>Cliente</strong></td>
+								<td><small><%= midata.customer_first_name %> <%= midata.customer_last_name %></small></td>
+								<td><strong>Telefono:</strong></td>
+								<td><small><%= midata.customer_phone %></small></td>
+							</tr>
+							<tr>
+								<td><strong>Vendedor</strong></td>
+								<td><small><%- midata.vendedor_first_name %> <%- midata.vendedor_last_name %></small></td>
+								<td><strong>Whatsapp</strong></td>
+								<td><small><%- midata.vendedor_phone%></small></td>
+							</tr>
+						
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+	
+	</script>
+</body>
+</html>
