@@ -40,6 +40,7 @@ app.get('/', async (req, res) => {
                 console.log("text fue enviado!");   
             }
         })
+        console.log("text fue enviado!");  
     }else if (req.query.type == 'galery') {
         const media = MessageMedia.fromFilePath(req.query.attachment);
         client.sendMessage(chatId, media, {caption: req.query.message}).then((response) => {
